@@ -5,8 +5,8 @@ require "dotenv"
 
 Dotenv.load
 
-CREDENTIALS_PATH = "./credentials.json".freeze # サービスアカウント作成時にDLしたJSONファイルをリネームしてルートディレクトリに配置。
-CALENDER_ID = ENV["CALENDER_ID"].freeze # Googleカレンダー設定ページの「カレンダーの統合」という項目内に記載されている。
+CREDENTIALS_PATH = "./credentials.json".freeze # サービスアカウント作成時にDLしたJSONファイルをリネームしてルートディレクトリに配置
+CALENDER_ID = ENV["CALENDER_ID"].freeze # Googleカレンダー設定ページの「カレンダーの統合」という項目内に記載されている
 
 # Googleカレンダー用クラス
 class GoogleCalendar
@@ -30,7 +30,7 @@ class GoogleCalendar
   def get_events(date)
     @service.list_events(
       @calendar_id,
-      max_results: 10,               # 取得する予定の最大数。
+      max_results: 10,               # 取得する予定の最大数
       single_events: true,
       order_by: "startTime",
       time_zone: "Asia/Tokyo",
