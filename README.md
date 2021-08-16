@@ -1,8 +1,8 @@
-# daily-report-template
+# daily-report-maker
 
 ![スクリーンショット 2021-08-17 3 54 42_censored (1)](https://user-images.githubusercontent.com/51913879/129616235-0b3d4b5d-43ea-41d2-9fc1-8a4031f6108c.jpg)
 
-日報テンプレート。毎回わざわざGoogleカレンダーの予定を確認しに行って一個一個書き込むみたいなのが面倒だったので作った。毎日終業時にSlackへ通知してくれるので、後はコピペすればOK。
+日報メーカー。毎回わざわざGoogleカレンダーの予定を確認しに行って一個一個書き込むみたいなのが面倒だったので作った。毎日終業時にSlackへ通知してくれるので、後はコピペすればOK。
 
 ## セットアップ
 
