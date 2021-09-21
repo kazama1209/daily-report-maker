@@ -15,6 +15,11 @@ today_events = google_calendar.get_events(today).items.map{ |e| "- #{e.summary}"
 # 明日の予定
 tommorow_events = google_calendar.get_events(today + 1).items.map{ |e| "- #{e.summary}" }
 
+# 「休暇」という予定が含まれていた場合は終了
+if tommorow_events.any? { |tommorow_event| tommorow_event.include?("休暇") }
+  return
+end
+
 message = <<~EOS
   ☆ 日報コピペ用 ☆
 
