@@ -23,9 +23,6 @@ end
 message = <<~EOS
   ☆ 日報コピペ用 ☆
 
-  打刻: #{ENV["KOF_URL"]}
-  日報: #{ENV["TUNAG_URL"]}
-
   ```
   【本日の業務】
   #{today_events.map.with_index{ |e, i| i != (today_events.size - 1) ? "#{e} \n" : e }.join}
