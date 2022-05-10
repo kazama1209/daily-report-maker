@@ -8,7 +8,7 @@ SLACK_BOT_TOKEN = ENV["SLACK_BOT_TOKEN"].freeze
 SLACK_CHANNEL_NAME = ENV["SLACK_CHANNEL_NAME"].freeze
 
 # Slack通知用クラス
-class SlackNotifer
+class SlackNotifier
   def initialize
     @client = Slack::Web::Client.new(token: SLACK_BOT_TOKEN)
   end

@@ -2,7 +2,7 @@ require "bundler/setup"
 require "date"
 require "holiday_japan"
 require "./lib/google_calendar"
-require "./lib/slack_notifer.rb"
+require "./lib/slack_notifier.rb"
 
 # AWS Lambdaで動かす用
 def lambda_handler(event:, context:)
@@ -33,6 +33,6 @@ def lambda_handler(event:, context:)
   EOS
 
   # Slackにメッセージを送信
-  slack_notifer = SlackNotifer.new
-  slack_notifer.send(message)
+  slack_notifier = SlackNotifier.new
+  slack_notifier.send(message)
 end

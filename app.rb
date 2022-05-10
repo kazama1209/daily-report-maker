@@ -2,7 +2,7 @@ require "bundler/setup"
 require "date"
 require "holiday_japan"
 require "./lib/google_calendar.rb"
-require "./lib/slack_notifer.rb"
+require "./lib/slack_notifier.rb"
 
 today = Date.today
 # 祝日だった場合は即終了
@@ -36,5 +36,5 @@ message = <<~EOS
 EOS
 
 # Slackにメッセージを送信
-slack_notifer = SlackNotifer.new
-slack_notifer.send(message)
+slack_notifier = SlackNotifier.new
+slack_notifier.send(message)
